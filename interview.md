@@ -150,12 +150,12 @@ SSL에서는 공개키 암호화 방식을 채용하고 있습니다.
 # 5. 소켓서버/웹서버
 
 	1) 소켓서버
-	http://www.gpgstudy.com/gpgiki/%EC%86%8C%EC%BC%93_%EA%B0%95%EC%A2%8C
+	[1](http://www.gpgstudy.com/gpgiki/%EC%86%8C%EC%BC%93_%EA%B0%95%EC%A2%8C)
 	2) 웹서버
-	http://sungbine.github.io/tech/post/2015/02/15/tomcat%EA%B3%BC%20apache%EC%9D%98%20%EC%97%B0%EB%8F%99.html
-	https://okky.kr/article/243427
-	https://github.com/lesstif/web-service-hardening/blob/master/web-server.md
-	http://round1tko.tistory.com/64
+	[1](http://sungbine.github.io/tech/post/2015/02/15/tomcat%EA%B3%BC%20apache%EC%9D%98%20%EC%97%B0%EB%8F%99.html)
+	[2](https://okky.kr/article/243427)
+	[3](https://github.com/lesstif/web-service-hardening/blob/master/web-server.md)
+	[4](http://round1tko.tistory.com/64)
 	
 # 6. IOCP
 
