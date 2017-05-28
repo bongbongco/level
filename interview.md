@@ -150,30 +150,30 @@ SSL에서는 공개키 암호화 방식을 채용하고 있습니다.
 # 5. 소켓서버/웹서버
 
 ## 5.1. 소켓서버
-[1](http://www.gpgstudy.com/gpgiki/%EC%86%8C%EC%BC%93_%EA%B0%95%EC%A2%8C)
+[1](http://www.gpgstudy.com/gpgiki/%EC%86%8C%EC%BC%93_%EA%B0%95%EC%A2%8C)  
 ## 5.2. 웹서버
-[1](http://sungbine.github.io/tech/post/2015/02/15/tomcat%EA%B3%BC%20apache%EC%9D%98%20%EC%97%B0%EB%8F%99.html)
-[2](https://okky.kr/article/243427)
-[3](https://github.com/lesstif/web-service-hardening/blob/master/web-server.md)
-[4](http://round1tko.tistory.com/64)
+[1](http://sungbine.github.io/tech/post/2015/02/15/tomcat%EA%B3%BC%20apache%EC%9D%98%20%EC%97%B0%EB%8F%99.html)  
+[2](https://okky.kr/article/243427)  
+[3](https://github.com/lesstif/web-service-hardening/blob/master/web-server.md)  
+[4](http://round1tko.tistory.com/64)  
 	
 # 6. IOCP
 
  IOCP는 Input/Output Completion Port의 약자로 입력과 출력의 완료를 담당할 포트를 지정해서 처리하겠다는 의미이다. 입력과 출력의 완료시점에서의 통지는 overlapped(중첩 입출력)에서 처리가 되므로, 이 기술은 윈도의 중첩 입출력 기술을 확장시킨 것으로 볼 수 있다.
 포트는 작업 혹은 서비스를 전담하기 위해서 만들어지는 객체다. 소켓의 포트가 특정 서비스로 데이터 입출력을 전달하기 위한 객체임을 상기하면 이해가 쉬울 것이다. 이러한 포트의 특징을 이해하면, 입출력 완료 시점에서 이에 대한 통지를 전담할 포트를 만들어서 데이터를 처리하는 방식도 충분히 생각해 볼 수 있을 것이다.
- https://www.joinc.co.kr/w/Site/win_network_prog/doc/iocp
- http://ozt88.tistory.com/23
+[1](https://www.joinc.co.kr/w/Site/win_network_prog/doc/iocp)  
+[2](http://ozt88.tistory.com/23)  
  
 # 7. 하둡
 
  대량의 자료를 처리할 수 있는 큰 컴퓨터 클러스터에서 동작하는 분산 응용 프로그램을 지원하는 프리웨어 자바 소프트웨어 프레임워크이다.
- http://www.itworld.co.kr/print/73626
+ [1](http://www.itworld.co.kr/print/73626)  
  
 # 8. jquery / bootstrap / ajax
 
 ## 8.1. javascript
 자바스크립트는 ECMAScript 표준 명세를 따라 구현된 객체 기반 스크립트 프로그래밍 언어이다. HTML 태그 또는 엘리먼트라고 불리는 DOM(Document Object Model)과 BOM(Browser Object Model)을 조작하거나, SPA(Single Page Application)에서 서버와 Ajax 통신을 하는 용도로 주로 사용된다.
-	https://github.com/nhnent/fe.javascript/wiki/%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0
+[1](https://github.com/nhnent/fe.javascript/wiki/%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0)  
 	
 ## 2. jquery : 자바스크립트의 생산성을 향상시켜주는 자바스크립트 라이브러리
 	
@@ -181,91 +181,86 @@ SSL에서는 공개키 암호화 방식을 채용하고 있습니다.
 		
 ## 4. ajax : Web에서 화면을 갱신하지 않고 Server로 부터 Data를 가져오는 방법
 ### 4.1. 동작원리 : Ajax의 동작원리는 Browser에서 서버로 보낼 Data를 Ajax Engine을 통해 Server로 전송합니다. 이 때 Ajax Engine에서는 JavaScript를 통해 DOM을 사용하여 XMLHttpRequest(XHR) 객체로 Data를 전달합니다. 이 XHR을 이용해서 Server에서 비동기 방식으로 자료를 조회해 올 수 있습니다. Server에서 Data를 전달 할 때 화면전체의 HTML을 전달하지 않고 Text 또는 Xml형식으로 Browser에 전달합니다.
-	
-		http://www.nextree.co.kr/p4771/
-	
+[1](http://www.nextree.co.kr/p4771/)  
 	
 # 9. 웹앱
 
  브라우저를 이용한 HTML, CSS, 자바스크립트를 사용해 만들어진 어플리케이션으로 인터넷 서비스도 이에 포함된다.
- 
- http://d2.naver.com/helloworld/179084
+ [1](http://d2.naver.com/helloworld/179084)  
  
  
 # 10. aws (ec2 / elastic search / dynamodb/lambda)
 
 ## 10.1. EC2 : EC2(Elastic Compute Cloud)는 AWS 클라우드에서 확장식 컴퓨팅을 제공한다. 
-http://docs.aws.amazon.com/ko_kr/AWSEC2/latest/UserGuide/concepts.html
+[1](http://docs.aws.amazon.com/ko_kr/AWSEC2/latest/UserGuide/concepts.html)  
 
 ## 10.2.) Elastic Search : 아파치 루씬을 기반으로 개발된 오픈소스 분산검색엔진
-http://d2.naver.com/helloworld/273788
-http://opennote46.tistory.com/143
-http://elasticsearch.tistory.com/entry/elasticsearch%EB%9E%80
-
-
-	※ 루씬 : http://killsia.tistory.com/443
+[1](http://d2.naver.com/helloworld/273788)  
+[2](http://opennote46.tistory.com/143)  
+[3](http://elasticsearch.tistory.com/entry/elasticsearch%EB%9E%80)  
+[루씬](http://killsia.tistory.com/443)  
 
 ## 10.3. DynamoDB
-https://yangbongsoo.gitbooks.io/study/content/dynamodb2.html
-https://www.slideshare.net/awskr/dynamodb-42890664+&cd=5&hl=ko&ct=clnk&gl=kr
-http://docs.aws.amazon.com/ko_kr/amazondynamodb/latest/developerguide/Introduction.html
+[1](https://yangbongsoo.gitbooks.io/study/content/dynamodb2.html)  
+[2](https://www.slideshare.net/awskr/dynamodb-42890664+&cd=5&hl=ko&ct=clnk&gl=kr)  
+[3](http://docs.aws.amazon.com/ko_kr/amazondynamodb/latest/developerguide/Introduction.html)  
 
 ## 10.4. Lambda
-http://gun0912.tistory.com/59
-http://gun0912.tistory.com/60
-https://aws.amazon.com/ko/blogs/korea/category/aws-lambda/
-https://www.slideshare.net/awskorea/aws-lambda-100-sangpil-kim
+[1](http://gun0912.tistory.com/59)  
+[2](http://gun0912.tistory.com/60)  
+[3](https://aws.amazon.com/ko/blogs/korea/category/aws-lambda/)  
+[4](https://www.slideshare.net/awskorea/aws-lambda-100-sangpil-kim)  
 
 # 11. python / flask / sphinx
 
 ## 11.1. Python
-https://wikidocs.net/6
+[1](https://wikidocs.net/6)  
 
 ## 11.2. Flask
-https://spoqa.github.io/2012/01/16/wsgi-and-flask.html
-https://code.tutsplus.com/ko/tutorials/an-introduction-to-pythons-flask-framework--net-28822
+[1](https://spoqa.github.io/2012/01/16/wsgi-and-flask.html)  
+[2](https://code.tutsplus.com/ko/tutorials/an-introduction-to-pythons-flask-framework--net-28822)  
 
 ## 11.3. Sphinx
-http://sacstory.tistory.com/entry/Debian-%EA%B2%80%EC%83%89-%EC%97%94%EC%A7%84-Sphinx-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0
-http://crystalcube.co.kr/165
-http://wiki.pchero21.com/wiki/Sphinx
+[1](http://sacstory.tistory.com/entry/Debian-%EA%B2%80%EC%83%89-%EC%97%94%EC%A7%84-Sphinx-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0)  
+[2](http://crystalcube.co.kr/165)  
+[3](http://wiki.pchero21.com/wiki/Sphinx)  
 	
 # 12. nginx / apache
 
 ## 12.1. Nginx
-https://opentutorials.org/module/384/3462
-http://d2.naver.com/helloworld/192785
-https://openwiki.kr/tech/nginx
-http://www.haruair.com/blog/1900
+[1](https://opentutorials.org/module/384/3462)  
+[2](http://d2.naver.com/helloworld/192785)  
+[3](https://openwiki.kr/tech/nginx)  
+[4](http://www.haruair.com/blog/1900)  
 
 ## 12.2. Apache
-https://wiki.archlinux.org/index.php/Apache_HTTP_Server_(%ED%95%9C%EA%B5%AD%EC%96%B4)
-http://cs.sch.ac.kr/lecture/Embedd/06-CompSys-8-Apache.pdf
+[1](https://wiki.archlinux.org/index.php/Apache_HTTP_Server_(%ED%95%9C%EA%B5%AD%EC%96%B4)  
+[2](http://cs.sch.ac.kr/lecture/Embedd/06-CompSys-8-Apache.pdf)  
 
 # 13. mysql / mariadb
 
 ## 13.1. Mysql
-https://wiki.gentoo.org/wiki/MySQL/Startup_Guide/ko
+[1](https://wiki.gentoo.org/wiki/MySQL/Startup_Guide/ko)  
 Mysql 퍼포먼스 최적화
 
 ## 13.2. MariaDB
-https://mariadb.com/kb/ko/mariadb/
+[1](https://mariadb.com/kb/ko/mariadb/)  
 
 # 14. rabbitmq / redis
 
 ## 14.1. RabbitMQ
-http://blog.saltfactory.net/install-rabbitmq/
-http://bcho.tistory.com/786
-http://abh0518.net/tok/?p=384
-https://github.com/gjchoi/gjchoi.github.io/blob/master/_posts/2016-02-27-rabbit-mq-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0.md
-http://hamait.tistory.com/401
-http://blog.hkwon.me/rabbitmq-php-node-jsreul-hwalyonghae-gcm-push-ceorihagi/
+[1](http://blog.saltfactory.net/install-rabbitmq/)  
+[2](http://bcho.tistory.com/786)  
+[3](http://abh0518.net/tok/?p=384)  
+[4](https://github.com/gjchoi/gjchoi.github.io/blob/master/_posts/2016-02-27-rabbit-mq-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0.md)  
+[5](http://hamait.tistory.com/401)  
+[6](http://blog.hkwon.me/rabbitmq-php-node-jsreul-hwalyonghae-gcm-push-ceorihagi/)  
 
 ## 14.2. Redis
-http://tech.kakao.com/2016/03/11/redis-scan/
-http://bcho.tistory.com/654
-http://kerocat.tistory.com/1
-http://d2.naver.com/helloworld/614607
+[1](http://tech.kakao.com/2016/03/11/redis-scan/)  
+[2](http://bcho.tistory.com/654)  
+[3](http://kerocat.tistory.com/1)  
+[4](http://d2.naver.com/helloworld/614607)  
 	
 	
 # 15. json query
@@ -274,13 +269,13 @@ http://d2.naver.com/helloworld/614607
 # 16. monitoring / alert
 
 ## 16.1. Monitoring / Alert
-http://blurblah.net/1474
-http://mysqldbadmtech.blogspot.kr/2016/12/pmm-170-mysql-alert.html
-http://tech.whatap.io/2017/04/21/twitter_monitoring_and_alert-system/
-https://geunhokhim.wordpress.com/2017/01/02/grafana-influxdb-telegraf-monitoring-server-alerting-automation/
-http://tech.kakao.com/2016/08/25/kemi/
-https://engineering.linecorp.com/ko/blog/detail/147
-https://blog.outsider.ne.kr/1254
+[1](http://blurblah.net/1474)  
+[2](http://mysqldbadmtech.blogspot.kr/2016/12/pmm-170-mysql-alert.html)  
+[3](http://tech.whatap.io/2017/04/21/twitter_monitoring_and_alert-system/)  
+[4](https://geunhokhim.wordpress.com/2017/01/02/grafana-influxdb-telegraf-monitoring-server-alerting-automation/)  
+[5](http://tech.kakao.com/2016/08/25/kemi/)  
+[6](https://engineering.linecorp.com/ko/blog/detail/147)  
+[7](https://blog.outsider.ne.kr/1254)  
 	
 
 # 17. 최근 관심 분야
