@@ -10,7 +10,7 @@
 ### 1.1.1. Status code : HTTP 통신 중 요청의 상태 정보 제공
 1. 1xx - Informational - 정보교환
 2. 2xx - Success - 성공
-* 200 - OK	- 요청이 성공적으로 전송됨
+	* 200 - OK	- 요청이 성공적으로 전송됨
 3. 3xx - Redirection - 방향 지정
 * 301 - Moved Permanently - 요청 페이지의 영구적인 위치 변화
 * 302 - Found	- 요청 페이지이 일시적인 위치 변화
