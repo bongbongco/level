@@ -175,13 +175,41 @@ SSL에서는 공개키 암호화 방식을 채용하고 있습니다.
 자바스크립트는 ECMAScript 표준 명세를 따라 구현된 객체 기반 스크립트 프로그래밍 언어이다. HTML 태그 또는 엘리먼트라고 불리는 DOM(Document Object Model)과 BOM(Browser Object Model)을 조작하거나, SPA(Single Page Application)에서 서버와 Ajax 통신을 하는 용도로 주로 사용된다.
 [1](https://github.com/nhnent/fe.javascript/wiki/%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0)  
 	
-## 2. jquery : 자바스크립트의 생산성을 향상시켜주는 자바스크립트 라이브러리
+## 2. jquery
+자바스크립트의 생산성을 향상시켜주는 자바스크립트 라이브러리
 	
-## 3. bootstrap : 트위터에서 시작된 HTML5 기반의 오픈 소스 웹 디자인 프레임워크
+## 3. bootstrap
+트위터에서 시작된 HTML5 기반의 오픈 소스 웹 디자인 프레임워크
 		
-## 4. ajax : Web에서 화면을 갱신하지 않고 Server로 부터 Data를 가져오는 방법
-### 4.1. 동작원리 : Ajax의 동작원리는 Browser에서 서버로 보낼 Data를 Ajax Engine을 통해 Server로 전송합니다. 이 때 Ajax Engine에서는 JavaScript를 통해 DOM을 사용하여 XMLHttpRequest(XHR) 객체로 Data를 전달합니다. 이 XHR을 이용해서 Server에서 비동기 방식으로 자료를 조회해 올 수 있습니다. Server에서 Data를 전달 할 때 화면전체의 HTML을 전달하지 않고 Text 또는 Xml형식으로 Browser에 전달합니다.
-[1](http://www.nextree.co.kr/p4771/)  
+## 4. ajax
+Web에서 화면을 갱신하지 않고 Server로 부터 Data를 가져오는 방법
+### 4.1. 동작원리
+Ajax의 동작원리는 Browser에서 서버로 보낼 Data를 Ajax Engine을 통해 Server로 전송합니다. 이 때 Ajax Engine에서는 JavaScript를 통해 DOM을 사용하여 XMLHttpRequest(XHR) 객체로 Data를 전달합니다. 이 XHR을 이용해서 Server에서 비동기 방식으로 자료를 조회해 올 수 있습니다. Server에서 Data를 전달 할 때 화면전체의 HTML을 전달하지 않고 Text 또는 Xml형식으로 Browser에 전달합니다.
+### 4.2. 사용방법
+Ajax의 기본 Method를 이용해서 Server와 통신하려면 XMLHttpRequest를 직접 사용하기 때문에 상당히 복잡하다. 하지만 jQuery를 이용하면 간단히 구현할 수 있다.
+	// jQuery를 이용한 Ajax 기본 사용방법입니다.
+	$.ajax({
+		// URL은 필수 요소이므로 반드시 구현해야 하는 Property입니다.
+		url : '요청 URL 주소를 입력합니다.'
+		// 다양한 속성들 중에서 필요한 Option을 선택해서 구현합니다.('[]'는 반복해서 사용할 수 있다는 의미입니다.)
+		[, Options]
+	});
+
+#### 4.2.1. Ajax 통신에 필요한 Property
+
+* url : 요청 전송 URL
+* type : HTTP 요청 방식 (GET/POST)
+* timeout : 요청 제한 시간
+* success : 요청 성공 시 이벤트 핸들러
+* error : 요청 실패 시 이벤트 핸들러
+* complete : 요청 완료 시 이벤트 핸들러
+* data : 요청 후 Return 값
+* dataType : 요청 후 Return 값의 Data type(xml, html, script, json, jsonp, text)
+* async : 요청 시 동기 유무(True/False)
+* cache : 페이지 캐시
+* beforeSend : 요청 전 이벤트 핸들러
+* global : 전역함수 활성 여부 (True/False)
+[1](http://www.nextree.co.kr/p4771/)  
 	
 # 9. 웹앱
 
