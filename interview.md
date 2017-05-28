@@ -1,9 +1,9 @@
 정리 중...
 
-1. HTTP/HTTP 2.0
+1. HTTP/HTTP 2.0  
 ================
 
-1) HTTP
+1) HTTP  
 -------
 
  Huyper Text Transfer Protocol의 약자로 WWW(World Wide Web)에서 하이퍼텍스트(hypertext) 문자를 교환하기 위하여 사용되는 통신규약.
