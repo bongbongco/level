@@ -8,26 +8,26 @@
  Huyper Text Transfer Protocol의 약자로 WWW(World Wide Web)에서 하이퍼텍스트(hypertext) 문자를 교환하기 위하여 사용되는 통신규약.
 
 ### 1.1.1. Status code : HTTP 통신 중 요청의 상태 정보 제공
-1. 1xx - Informational - 정보교환
-2. 2xx - Success - 성공
-	* 200 - OK	- 요청이 성공적으로 전송됨
-3. 3xx - Redirection - 방향 지정
-* 301 - Moved Permanently - 요청 페이지의 영구적인 위치 변화
-* 302 - Found	- 요청 페이지이 일시적인 위치 변화
-4. 4xx - Client Error - 클라이언트 오류
-* 404 - Not Found - 요청받은 자원을 서버에서 찾을 수 없을때 나타나는 상태 
-* 405 - Method Not Allowed - 서버에서 사용자가 요청한 주소의 메소드를 지원하지 않을때 나타남
-5. 5xx - server Error - 서버 오류
+	1. 1xx - Informational - 정보교환
+	2. 2xx - Success - 성공
+		* 200 - OK	- 요청이 성공적으로 전송됨
+	3. 3xx - Redirection - 방향 지정
+		* 301 - Moved Permanently - 요청 페이지의 영구적인 위치 변화
+		* 302 - Found	- 요청 페이지이 일시적인 위치 변화
+	4. 4xx - Client Error - 클라이언트 오류
+		* 404 - Not Found - 요청받은 자원을 서버에서 찾을 수 없을때 나타나는 상태 
+		* 405 - Method Not Allowed - 서버에서 사용자가 요청한 주소의 메소드를 지원하지 않을때 나타남
+	5. 5xx - server Error - 서버 오류
 
 ### 1.1.2. Request Method : 
-1. OPTIONS: 요청한 URL에 어떠한 메소드 요청이 가능한지 묻는다.
-2. GET: 다른 작업없이 데이터의 검색에 이용.
-3. HEAD: 데이터의 검색에 이용하나 GET과는 다르게 응답 HEADER만 받는다.
-4. POST: URL에 새로운 데이터를 보낼때 사용.
-5. PUT: URL에 저장될 정보를 보낸다.
-6. DELETE: URL의 리소스를 삭제한다.
-7. TRACE: 보낸 메세지를 다시 돌려받는다.
-8. CONNECT: 프록시에서 사용되는 예약 메소드.
+	1. OPTIONS: 요청한 URL에 어떠한 메소드 요청이 가능한지 묻는다.
+	2. GET: 다른 작업없이 데이터의 검색에 이용.
+	3. HEAD: 데이터의 검색에 이용하나 GET과는 다르게 응답 HEADER만 받는다.
+	4. POST: URL에 새로운 데이터를 보낼때 사용.
+	5. PUT: URL에 저장될 정보를 보낸다.
+	6. DELETE: URL의 리소스를 삭제한다.
+	7. TRACE: 보낸 메세지를 다시 돌려받는다.
+	8. CONNECT: 프록시에서 사용되는 예약 메소드.
 		
 ## 1.2. HTTP 2.0
  Latency(지연 시간)를 줄여 웹의 속도를 개선하기 위해 등장. 효율적인 페이지 로딩을 위해 URL의 이미지, 스크립트등의 자원을 압축해 페이지 렌더링을 위한 요청횟수를 감소시켰다. 뿐만 아니라 server가 push가 가능해 웹페이지의 렌더링이 필요하단 사실을 알게되면 추가 요청없이 서버가 리소스를 제공한다. 그 외에도 성능 개선을 위한 요청 다중화, 헤더 압축, HOL Blocking해결을 위한 요청 우선순위 결정등이 있다.
