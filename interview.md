@@ -208,13 +208,14 @@ Ajax의 기본 Method를 이용해서 Server와 통신하려면 XMLHttpRequest�
 * async : 요청 시 동기 유무(True/False)
 * cache : 페이지 캐시
 * beforeSend : 요청 전 이벤트 핸들러
-* global : 전역함수 활성 여부 (True/False)
+* global : 전역함수 활성 여부 (True/False)  
+
 [1](http://www.nextree.co.kr/p4771/)  
 	
 # 9. 웹앱
 
- 브라우저를 이용한 HTML, CSS, 자바스크립트를 사용해 만들어진 어플리케이션으로 인터넷 서비스도 이에 포함된다.
- [1](http://d2.naver.com/helloworld/179084)  
+ 브라우저를 이용한 HTML, CSS, 자바스크립트를 사용해 만들어진 어플리케이션으로 인터넷 서비스도 이에 포함된다. 
+ [1](http://d2.naver.com/helloworld/179084)  
  
  
 # 10. aws (ec2 / elastic search / dynamodb/lambda)
