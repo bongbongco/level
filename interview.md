@@ -40,7 +40,8 @@
 		작업대기 중인 2개의 패킷이 존재할 경우 첫번째 패킷이 대기중이면 그 뒤 패킷들은 무조건 대기할때 발생.
 		
 	2. HTTP 2.0과 SPDY
-		* SPDY : Google이 ‘speedy’라는 단어를 기반으로 제안한 새로운 프로토콜이다. HTTP의 단점들을 보완하여, 인터넷 환경을 보다 효율적으로 이용하기 위한 프로토콜이다. HTTP/2.0에서는 스펙에 SPDY를 반영할 예정이다.
+		* SPDY : Google이 ‘speedy’라는 단어를 기반으로 제안한 새로운 프로토콜이다. HTTP의 단점들을 보완하여, 인터넷 환경을 
+		보다 효율적으로 이용하기 위한 프로토콜이다. HTTP/2.0에서는 스펙에 SPDY를 반영할 예정이다.
 		* 특징
 			* TLS 위에서 동작한다. https에서만 적용가능
 			* HTTP 헤더를 압축한다. 요청마다 반복되는 내용을 압축해 성능 향상 효과가 나타남
@@ -95,13 +96,15 @@ SSL에서는 공개키 암호화 방식을 채용하고 있습니다.
 # 3. TCP / UDP
 
 # 3.1. TCP
-		(1) 정의 : 연결형 서비스를 위해 호스트 간 신뢰성 있는 데이터 전달과 흐름제어 및 혼잡제어 등을 제공하는 전송계층 프로토콜로 인터넷 환경에서 기본으로 사용된다. 
+		(1) 정의 : 연결형 서비스를 위해 호스트 간 신뢰성 있는 데이터 전달과 흐름제어 및 혼잡제어 등을 
+		제공하는 전송계층 프로토콜로 인터넷 환경에서 기본으로 사용된다. 
 		
 		(2) 특징
 			- 가상 회선 연결 방식, 연결형 서비스를 제공
 			- 높은 신뢰성(Sequence Number, Ack Number를 통한 신뢰성 보장)
 			- 연결의 설정(3-way handshaking)과 해제(4-way handshaking)
-			- 데이터 흐름 제어(수신자 버퍼 오버플로우 방지) 및 혼잡 제어(네트워크 내 패킷 수가 과도하게 증가하는 현상 방지)
+			- 데이터 흐름 제어
+			(수신자 버퍼 오버플로우 방지) 및 혼잡 제어(네트워크 내 패킷 수가 과도하게 증가하는 현상 방지)
 			- 전이중(Full-Duplex), 점대점(Point to Point) 서비스
 		
 		(3) 소켓 통신 과정
@@ -109,7 +112,8 @@ SSL에서는 공개키 암호화 방식을 채용하고 있습니다.
 			- 클라이언트 : 소켓을 생성, 주소 할당, 연결 요청		
 			
 # 3.2. UDP
-		(1) 정의 : 비연결형 서비스를 지원하는 전송계층 프로토콜로 정보를 보낸다는 신호나 받는다는 신호 절차를 거치지 않고, 일방적으로 데이터를 전달. 
+		(1) 정의 : 비연결형 서비스를 지원하는 전송계층 프로토콜로 정보를 보낸다는 신호나 받는다는 
+		신호 절차를 거치지 않고, 일방적으로 데이터를 전달. 
 
 		(2) 특징
 			- 비연결형(port만 확인하여 소켓을 식별하고 송수신)
@@ -123,18 +127,20 @@ SSL에서는 공개키 암호화 방식을 채용하고 있습니다.
 			- 서버 : 소켓을 생성, 주소 할당, 데이터를 송수신
 			- 클라이언트 : 소켓 생성 후 데이터 수신
 
-			UDP는 TCP와 달리 데이터의 수신에 대한 책임을 지지 않는다. 이는 송신자는 정보를 보냈지만, 정보가 수신자에게 제때에 도착했는지 또는 정보 내용이 서로 뒤바뀌었는지에 관해서 송신자는 상관할 필요가 없다. TCP보다 안정성 면에서는 떨어지지만, 속도는 훨씬 빠르다.
-
+			UDP는 TCP와 달리 데이터의 수신에 대한 책임을 지지 않는다. 이는 송신자는 정보를 보냈지만, 
+			정보가 수신자에게 제때에 도착했는지 또는 정보 내용이 서로 뒤바뀌었는지에 관해서 송신자는 
+			상관할 필요가 없다. TCP보다 안정성 면에서는 떨어지지만, 속도는 훨씬 빠르다.
 	
 # 4. 쿠키/세션
 
-	1) 쿠키/세션이 필요한 이유
-		- HTTP 프로토콜은 연결 지향적인 통신이 아니므로 페이지 이동 시 마다 새로운 접속이 이루어지며 이전 페이지와 현재 페이지 간의 관계가 지속되지 않는다. 이러한 문제를 해결하기 위해서 쿠키와 세션을 사용한다.
-	2) 쿠키
+	1. 쿠키/세션이 필요한 이유
+		- HTTP 프로토콜은 연결 지향적인 통신이 아니므로 페이지 이동 시 마다 새로운 접속이 이루어지며 이전 
+		페이지와 현재 페이지 간의 관계가 지속되지 않는다. 이러한 문제를 해결하기 위해서 쿠키와 세션을 사용한다.
+	2. 쿠키
 		- Client PC에 저장되어 다른 사용자에 의한 임의 변경 위험이 있다.
 		- 생성 이후 서버로 전송되는 요청에는 쿠키 정보가 같이 포함되어 전송
 		- 이름, 값, 유효기간, 도메인, 경로 등으로 구성
-	3) 세션
+	3. 세션
 		- Session에 관련된 데이터는 Server에 저장된다.
 		- 웹 브라우저의 캐시에 저장되어 브라우저가 닫히거나 서버에서 삭제 시 사라진다.
 		- Cookie에 비해 보안성이 좋다.
@@ -165,14 +171,14 @@ SSL에서는 공개키 암호화 방식을 채용하고 있습니다.
  
 # 8. jquery / bootstrap / ajax
 
-	0) javascript : 자바스크립트는 ECMAScript 표준 명세를 따라 구현된 객체 기반 스크립트 프로그래밍 언어이다. HTML 태그 또는 엘리먼트라고 불리는 DOM(Document Object Model)과 BOM(Browser Object Model)을 조작하거나, SPA(Single Page Application)에서 서버와 Ajax 통신을 하는 용도로 주로 사용된다.
+## 8.1. javascript : 자바스크립트는 ECMAScript 표준 명세를 따라 구현된 객체 기반 스크립트 프로그래밍 언어이다. HTML 태그 또는 엘리먼트라고 불리는 DOM(Document Object Model)과 BOM(Browser Object Model)을 조작하거나, SPA(Single Page Application)에서 서버와 Ajax 통신을 하는 용도로 주로 사용된다.
 	https://github.com/nhnent/fe.javascript/wiki/%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0
 	
-	1) jquery : 자바스크립트의 생산성을 향상시켜주는 자바스크립트 라이브러리
+## 2. jquery : 자바스크립트의 생산성을 향상시켜주는 자바스크립트 라이브러리
 	
-	2) bootstrap : 트위터에서 시작된 HTML5 기반의 오픈 소스 웹 디자인 프레임워크
+## 3. bootstrap : 트위터에서 시작된 HTML5 기반의 오픈 소스 웹 디자인 프레임워크
 		
-	3) ajax : Web에서 화면을 갱신하지 않고 Server로 부터 Data를 가져오는 방법
+## 4. ajax : Web에서 화면을 갱신하지 않고 Server로 부터 Data를 가져오는 방법
 		(1) 동작원리 : Ajax의 동작원리는 Browser에서 서버로 보낼 Data를 Ajax Engine을 통해 Server로 전송합니다. 이 때 Ajax Engine에서는 JavaScript를 통해 DOM을 사용하여 XMLHttpRequest(XHR) 객체로 Data를 전달합니다. 이 XHR을 이용해서 Server에서 비동기 방식으로 자료를 조회해 올 수 있습니다. Server에서 Data를 전달 할 때 화면전체의 HTML을 전달하지 않고 Text 또는 Xml형식으로 Browser에 전달합니다.
 	
 		http://www.nextree.co.kr/p4771/
@@ -187,95 +193,93 @@ SSL에서는 공개키 암호화 방식을 채용하고 있습니다.
  
 # 10. aws (ec2 / elastic search / dynamodb/lambda)
 
-	1) EC2 : EC2(Elastic Compute Cloud)는 AWS 클라우드에서 확장식 컴퓨팅을 제공한다. 
-	http://docs.aws.amazon.com/ko_kr/AWSEC2/latest/UserGuide/concepts.html
-	
-	2) Elastic Search : 아파치 루씬을 기반으로 개발된 오픈소스 분산검색엔진
-	http://d2.naver.com/helloworld/273788
-	http://opennote46.tistory.com/143
-	http://elasticsearch.tistory.com/entry/elasticsearch%EB%9E%80
-	
-	
-		※ 루씬 : http://killsia.tistory.com/443
-		
-	3) DynamoDB
-	https://yangbongsoo.gitbooks.io/study/content/dynamodb2.html
-	https://www.slideshare.net/awskr/dynamodb-42890664+&cd=5&hl=ko&ct=clnk&gl=kr
-	http://docs.aws.amazon.com/ko_kr/amazondynamodb/latest/developerguide/Introduction.html
-	
-	4) Lambda
-	http://gun0912.tistory.com/59
-	http://gun0912.tistory.com/60
-	https://aws.amazon.com/ko/blogs/korea/category/aws-lambda/
-	https://www.slideshare.net/awskorea/aws-lambda-100-sangpil-kim
+## 10.1. EC2 : EC2(Elastic Compute Cloud)는 AWS 클라우드에서 확장식 컴퓨팅을 제공한다. 
+http://docs.aws.amazon.com/ko_kr/AWSEC2/latest/UserGuide/concepts.html
+
+## 10.2.) Elastic Search : 아파치 루씬을 기반으로 개발된 오픈소스 분산검색엔진
+http://d2.naver.com/helloworld/273788
+http://opennote46.tistory.com/143
+http://elasticsearch.tistory.com/entry/elasticsearch%EB%9E%80
+
+
+	※ 루씬 : http://killsia.tistory.com/443
+
+## 10.3. DynamoDB
+https://yangbongsoo.gitbooks.io/study/content/dynamodb2.html
+https://www.slideshare.net/awskr/dynamodb-42890664+&cd=5&hl=ko&ct=clnk&gl=kr
+http://docs.aws.amazon.com/ko_kr/amazondynamodb/latest/developerguide/Introduction.html
+
+## 10.4. Lambda
+http://gun0912.tistory.com/59
+http://gun0912.tistory.com/60
+https://aws.amazon.com/ko/blogs/korea/category/aws-lambda/
+https://www.slideshare.net/awskorea/aws-lambda-100-sangpil-kim
 
 # 11. python / flask / sphinx
 
-	1) Python
-	https://wikidocs.net/6
-	
-	2) Flask
-	https://spoqa.github.io/2012/01/16/wsgi-and-flask.html
-	https://code.tutsplus.com/ko/tutorials/an-introduction-to-pythons-flask-framework--net-28822
-	
-	3) Sphinx
-	http://sacstory.tistory.com/entry/Debian-%EA%B2%80%EC%83%89-%EC%97%94%EC%A7%84-Sphinx-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0
-	http://crystalcube.co.kr/165
-	http://wiki.pchero21.com/wiki/Sphinx
+## 11.1. Python
+https://wikidocs.net/6
+
+## 11.2. Flask
+https://spoqa.github.io/2012/01/16/wsgi-and-flask.html
+https://code.tutsplus.com/ko/tutorials/an-introduction-to-pythons-flask-framework--net-28822
+
+## 11.3. Sphinx
+http://sacstory.tistory.com/entry/Debian-%EA%B2%80%EC%83%89-%EC%97%94%EC%A7%84-Sphinx-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0
+http://crystalcube.co.kr/165
+http://wiki.pchero21.com/wiki/Sphinx
 	
 # 12. nginx / apache
 
-	1) Nginx
-	https://opentutorials.org/module/384/3462
-	http://d2.naver.com/helloworld/192785
-	https://openwiki.kr/tech/nginx
-	http://www.haruair.com/blog/1900
-	
-	2) Apache
-	https://wiki.archlinux.org/index.php/Apache_HTTP_Server_(%ED%95%9C%EA%B5%AD%EC%96%B4)
-	http://cs.sch.ac.kr/lecture/Embedd/06-CompSys-8-Apache.pdf
+## 12.1. Nginx
+https://opentutorials.org/module/384/3462
+http://d2.naver.com/helloworld/192785
+https://openwiki.kr/tech/nginx
+http://www.haruair.com/blog/1900
+
+## 12.2. Apache
+https://wiki.archlinux.org/index.php/Apache_HTTP_Server_(%ED%95%9C%EA%B5%AD%EC%96%B4)
+http://cs.sch.ac.kr/lecture/Embedd/06-CompSys-8-Apache.pdf
 
 # 13. mysql / mariadb
 
-	1) Mysql
-	https://wiki.gentoo.org/wiki/MySQL/Startup_Guide/ko
-	Mysql 퍼포먼스 최적화
-	
-	2) MariaDB
-	https://mariadb.com/kb/ko/mariadb/
+## 13.1. Mysql
+https://wiki.gentoo.org/wiki/MySQL/Startup_Guide/ko
+Mysql 퍼포먼스 최적화
+
+## 13.2. MariaDB
+https://mariadb.com/kb/ko/mariadb/
 
 # 14. rabbitmq / redis
 
-	1) RabbitMQ
-	http://blog.saltfactory.net/install-rabbitmq/
-	http://bcho.tistory.com/786
-	http://abh0518.net/tok/?p=384
-	https://github.com/gjchoi/gjchoi.github.io/blob/master/_posts/2016-02-27-rabbit-mq-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0.md
-	http://hamait.tistory.com/401
-	http://blog.hkwon.me/rabbitmq-php-node-jsreul-hwalyonghae-gcm-push-ceorihagi/
-	
-	2) Redis
-	http://tech.kakao.com/2016/03/11/redis-scan/
-	http://bcho.tistory.com/654
-	http://kerocat.tistory.com/1
-	http://d2.naver.com/helloworld/614607
+## 14.1. RabbitMQ
+http://blog.saltfactory.net/install-rabbitmq/
+http://bcho.tistory.com/786
+http://abh0518.net/tok/?p=384
+https://github.com/gjchoi/gjchoi.github.io/blob/master/_posts/2016-02-27-rabbit-mq-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0.md
+http://hamait.tistory.com/401
+http://blog.hkwon.me/rabbitmq-php-node-jsreul-hwalyonghae-gcm-push-ceorihagi/
+
+## 14.2. Redis
+http://tech.kakao.com/2016/03/11/redis-scan/
+http://bcho.tistory.com/654
+http://kerocat.tistory.com/1
+http://d2.naver.com/helloworld/614607
 	
 	
 # 15. json query
 
-	1) Json Query
-	
 	
 # 16. monitoring / alert
 
-	1) Monitoring / Alert
-	http://blurblah.net/1474
-	http://mysqldbadmtech.blogspot.kr/2016/12/pmm-170-mysql-alert.html
-	http://tech.whatap.io/2017/04/21/twitter_monitoring_and_alert-system/
-	https://geunhokhim.wordpress.com/2017/01/02/grafana-influxdb-telegraf-monitoring-server-alerting-automation/
-	http://tech.kakao.com/2016/08/25/kemi/
-	https://engineering.linecorp.com/ko/blog/detail/147
-	https://blog.outsider.ne.kr/1254
+## 16.1. Monitoring / Alert
+http://blurblah.net/1474
+http://mysqldbadmtech.blogspot.kr/2016/12/pmm-170-mysql-alert.html
+http://tech.whatap.io/2017/04/21/twitter_monitoring_and_alert-system/
+https://geunhokhim.wordpress.com/2017/01/02/grafana-influxdb-telegraf-monitoring-server-alerting-automation/
+http://tech.kakao.com/2016/08/25/kemi/
+https://engineering.linecorp.com/ko/blog/detail/147
+https://blog.outsider.ne.kr/1254
 	
 
 # 17. 최근 관심 분야
@@ -293,43 +297,42 @@ SSL에서는 공개키 암호화 방식을 채용하고 있습니다.
 ***
 # 19. 객체지향
 
-	데이터를 객체로 취급하여 객체 간의 상호작용을 통해 프로그램이 동작하게 하는 설계 기법
-	코드 재사용성이 높다.
-	코드의 변경이 쉽다.
-	코드 분석이 쉽다.
-	객체지향 원칙을 사용하여(캡슐화, 상속, 다형성) 개발속도가 빨라진다.
+* 데이터를 객체로 취급하여 객체 간의 상호작용을 통해 프로그램이 동작하게 하는 설계 기법
+* 코드 재사용성이 높다.
+* 코드의 변경이 쉽다.
+ *코드 분석이 쉽다.
+ *객체지향 원칙을 사용하여(캡슐화, 상속, 다형성) 개발속도가 빨라진다.
 
 # 20. Object
 
-	객체는 객체지향프로그래밍에서 데이터와 그 데이터에 관련되는 동작, 모두가 포함되는 개념
+객체는 객체지향프로그래밍에서 데이터와 그 데이터에 관련되는 동작, 모두가 포함되는 개념
 	
 # 21. Overloading과 Overriding
 
-	Overloading 같은 이름의 메소드를 여러 개 정의	정의된 메소드의 매개변수는 타입이나 개수가 다름 return type과 접근 제어자는 영향을 주지 않음
-
-	Overriding 관련 개념 : 상속 상위 클래스의 메소드를 하위 클래스에서 재정의
+* Overloading 같은 이름의 메소드를 여러 개 정의된 메소드의 매개변수는 타입이나 개수가 다름 return type과 접근 제어자는 영향을 주지 않음
+* Overriding 관련 개념 : 상속 상위 클래스의 메소드를 하위 클래스에서 재정의
 	
 # 22. Call by Reference, Call by Value
 
-	Call by Reference - 매개 변수의 원래 주소에 값을 저장하는 방식. 클래스 객체를 인수로 전달한 경우
-	Call by Value - 인수로 기본 데이터형을 사용. 주어진 값을 복사하여 처리하는 방식. 메서드 내의 처리 결과는 메서드 밖의 변수에 영향을 미치지 않는다.
+* Call by Reference - 매개 변수의 원래 주소에 값을 저장하는 방식. 클래스 객체를 인수로 전달한 경우
+* Call by Value - 인수로 기본 데이터형을 사용. 주어진 값을 복사하여 처리하는 방식. 메서드 내의 처리 결과는 메서드 밖의 변수에 영향을 미치지 않는다.
 
 # 23. Static
 
-	클래스가 로딩될 때, 메모리 공간을 할당하는데 처음 설정된 메모리 공간이 변하지 않음을 의미
-	객체를 아무리 많이 만들어도 해당 변수는 하나만 존재(객체와 무관한 키워드)
+* 클래스가 로딩될 때, 메모리 공간을 할당하는데 처음 설정된 메모리 공간이 변하지 않음을 의미
+* 객체를 아무리 많이 만들어도 해당 변수는 하나만 존재(객체와 무관한 키워드)
 	
 # 24. Index (Database)
 
-	인덱스는 데이터베이스 분야에 있어서 테이블에 대한 동작의 속도를 높여주는 자료 구조를 일컫는다.
-	인덱스는 테이블 내의 1개의 컬럼, 혹은 여러 개의 컬럼을 이용하여 생성될 수 있다.
-	고속의 검색 동작뿐만 아니라 레코드 접근과 관련 효율적인 순서 매김 동작에 대한 기초를 제공한다.
-	인덱스를 저장하는 데 필요한 디스크 공간은 보통 테이블을 저장하는 데 필요한 디스크 공간보다 작다.
-	데이터베이스에서 테이블과 클러스터에 연관되어 독립적인 저장 공간을 보유하고 있는 객체(object)이다.
-	사용자는 데이터베이스에 저장된 자료를 더욱 빠르게 조회하기 위하여 인덱스를 생성하고 사용한다.
-	DB에서 자료를 검색하는 두 가지 방법
-	FTS(Full Table Scan) : 테이블을 처음 부터 끝까지 검색하는 방법
-	Index Scan : 인덱스를 검색하여 해당 자료의 테이블을 액세스 하는 방법.
+인덱스는 데이터베이스 분야에 있어서 테이블에 대한 동작의 속도를 높여주는 자료 구조를 일컫는다.
+인덱스는 테이블 내의 1개의 컬럼, 혹은 여러 개의 컬럼을 이용하여 생성될 수 있다.
+고속의 검색 동작뿐만 아니라 레코드 접근과 관련 효율적인 순서 매김 동작에 대한 기초를 제공한다.
+인덱스를 저장하는 데 필요한 디스크 공간은 보통 테이블을 저장하는 데 필요한 디스크 공간보다 작다.
+데이터베이스에서 테이블과 클러스터에 연관되어 독립적인 저장 공간을 보유하고 있는 객체(object)이다.
+사용자는 데이터베이스에 저장된 자료를 더욱 빠르게 조회하기 위하여 인덱스를 생성하고 사용한다.
+* DB에서 자료를 검색하는 두 가지 방법
+  * FTS(Full Table Scan) : 테이블을 처음 부터 끝까지 검색하는 방법
+  * Index Scan : 인덱스를 검색하여 해당 자료의 테이블을 액세스 하는 방법.
 
 # 25. 자료구조
 
