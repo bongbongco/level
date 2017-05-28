@@ -34,14 +34,14 @@
 		* Server Push(서버에서 부터 시작되는 전송)
 		* HTTP 1에서 존재하던 head-of-line blocking 문제 개선
 		* 싱글 TCP connection내에서 병렬 페이지 로딩 구현
-		* 2.0은 기존 버전인 1.1과의 높은 호환성(method, status codes 등)은 보장하고 클라이언트 서버 간 전송 및 프레임의
-		개선에 초점을 맞췄다.
-		※ head-of-line blocking: 동일한 송신 포트 자원에 대한 처리량 경쟁으로 인해 처리량 지연 및 프레임 손실 발생 유발. 
-		작업대기 중인 2개의 패킷이 존재할 경우 첫번째 패킷이 대기중이면 그 뒤 패킷들은 무조건 대기할때 발생.
+		* 2.0은 기존 버전인 1.1과의 높은 호환성(method, status codes 등)은 보장하고 클라이언트 서버 간 전송 및 프레임
+		의 개선에 초점을 맞췄다.
+		※ head-of-line blocking: 동일한 송신 포트 자원에 대한 처리량 경쟁으로 인해 처리량 지연 및 프레임 손실 발생 
+		유발. 작업대기 중인 2개의 패킷이 존재할 경우 첫번째 패킷이 대기중이면 그 뒤 패킷들은 무조건 대기할때 발생.
 		
 	2. HTTP 2.0과 SPDY
-		* SPDY : Google이 ‘speedy’라는 단어를 기반으로 제안한 새로운 프로토콜이다. HTTP의 단점들을 보완하여, 인터넷 환경
-		을 보다 효율적으로 이용하기 위한 프로토콜이다. HTTP/2.0에서는 스펙에 SPDY를 반영할 예정이다.
+		* SPDY : Google이 ‘speedy’라는 단어를 기반으로 제안한 새로운 프로토콜이다. HTTP의 단점들을 보완하여, 인터넷 
+		환경을 보다 효율적으로 이용하기 위한 프로토콜이다. HTTP/2.0에서는 스펙에 SPDY를 반영할 예정이다.
 		* 특징
 			* TLS 위에서 동작한다. https에서만 적용가능
 			* HTTP 헤더를 압축한다. 요청마다 반복되는 내용을 압축해 성능 향상 효과가 나타남
@@ -180,7 +180,7 @@ SSL에서는 공개키 암호화 방식을 채용하고 있습니다.
 ## 3. bootstrap : 트위터에서 시작된 HTML5 기반의 오픈 소스 웹 디자인 프레임워크
 		
 ## 4. ajax : Web에서 화면을 갱신하지 않고 Server로 부터 Data를 가져오는 방법
-		(1) 동작원리 : Ajax의 동작원리는 Browser에서 서버로 보낼 Data를 Ajax Engine을 통해 Server로 전송합니다. 이 때 Ajax Engine에서는 JavaScript를 통해 DOM을 사용하여 XMLHttpRequest(XHR) 객체로 Data를 전달합니다. 이 XHR을 이용해서 Server에서 비동기 방식으로 자료를 조회해 올 수 있습니다. Server에서 Data를 전달 할 때 화면전체의 HTML을 전달하지 않고 Text 또는 Xml형식으로 Browser에 전달합니다.
+### 4.1. 동작원리 : Ajax의 동작원리는 Browser에서 서버로 보낼 Data를 Ajax Engine을 통해 Server로 전송합니다. 이 때 Ajax Engine에서는 JavaScript를 통해 DOM을 사용하여 XMLHttpRequest(XHR) 객체로 Data를 전달합니다. 이 XHR을 이용해서 Server에서 비동기 방식으로 자료를 조회해 올 수 있습니다. Server에서 Data를 전달 할 때 화면전체의 HTML을 전달하지 않고 Text 또는 Xml형식으로 Browser에 전달합니다.
 	
 		http://www.nextree.co.kr/p4771/
 	
