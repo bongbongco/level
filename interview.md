@@ -40,8 +40,8 @@
 		작업대기 중인 2개의 패킷이 존재할 경우 첫번째 패킷이 대기중이면 그 뒤 패킷들은 무조건 대기할때 발생.
 		
 	2. HTTP 2.0과 SPDY
-		* SPDY : Google이 ‘speedy’라는 단어를 기반으로 제안한 새로운 프로토콜이다. HTTP의 단점들을 보완하여, 인터넷 환경을 
-		보다 효율적으로 이용하기 위한 프로토콜이다. HTTP/2.0에서는 스펙에 SPDY를 반영할 예정이다.
+		* SPDY : Google이 ‘speedy’라는 단어를 기반으로 제안한 새로운 프로토콜이다. HTTP의 단점들을 보완하여, 인터넷 환경
+		을 보다 효율적으로 이용하기 위한 프로토콜이다. HTTP/2.0에서는 스펙에 SPDY를 반영할 예정이다.
 		* 특징
 			* TLS 위에서 동작한다. https에서만 적용가능
 			* HTTP 헤더를 압축한다. 요청마다 반복되는 내용을 압축해 성능 향상 효과가 나타남
@@ -171,7 +171,8 @@ SSL에서는 공개키 암호화 방식을 채용하고 있습니다.
  
 # 8. jquery / bootstrap / ajax
 
-## 8.1. javascript : 자바스크립트는 ECMAScript 표준 명세를 따라 구현된 객체 기반 스크립트 프로그래밍 언어이다. HTML 태그 또는 엘리먼트라고 불리는 DOM(Document Object Model)과 BOM(Browser Object Model)을 조작하거나, SPA(Single Page Application)에서 서버와 Ajax 통신을 하는 용도로 주로 사용된다.
+## 8.1. javascript
+자바스크립트는 ECMAScript 표준 명세를 따라 구현된 객체 기반 스크립트 프로그래밍 언어이다. HTML 태그 또는 엘리먼트라고 불리는 DOM(Document Object Model)과 BOM(Browser Object Model)을 조작하거나, SPA(Single Page Application)에서 서버와 Ajax 통신을 하는 용도로 주로 사용된다.
 	https://github.com/nhnent/fe.javascript/wiki/%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0
 	
 ## 2. jquery : 자바스크립트의 생산성을 향상시켜주는 자바스크립트 라이브러리
