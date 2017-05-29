@@ -248,7 +248,7 @@ Signal Driven I/O 에서는 I/O작업이 시작되는 순간에 신호를 보내
   * errno
   * 신호 선별
   * 우선순위
-
+  
 [1](http://www.gpgstudy.com/gpgiki/%EC%86%8C%EC%BC%93_%EA%B0%95%EC%A2%8C)  
 
 ## 5.2. 웹서버
@@ -274,16 +274,14 @@ WAS는 동적 처리에 최적화 되어 있는 서비스이기 때문에 처리
 사용자가 클라이언트(브라우저)에 요청을 하게 되면 이를 웹서버에서 반응하여 WAS의 처리를 거쳐 웹페이지로 다시 웹서버에서 클라이언트(브라우저)에 응답 메세지를 주는 것이다.
  
 한마디로 대답하면 WEB 서버가 처리할 수 있는 형태로 가공하여 제공해줄수 있는 웹 어플리케이션 정도가 될까.
-WAS를 사용하는 이유는 WEB서버에서는 웹 문서만 처리하도록 기능을 분배하여 서버의 부담을 줄이기 위한 것이라 할 수 있다.
-[1](http://sungbine.github.io/tech/post/2015/02/15/tomcat%EA%B3%BC%20apache%EC%9D%98%20%EC%97%B0%EB%8F%99.html)  
-[2](https://okky.kr/article/243427)  
-[3](https://github.com/lesstif/web-service-hardening/blob/master/web-server.md)  
-[4](http://round1tko.tistory.com/64)  
+WAS를 사용하는 이유는 WEB서버에서는 웹 문서만 처리하도록 기능을 분배하여 서버의 부담을 줄이기 위한 것이라 할 수 있다.  
+[1](https://github.com/lesstif/web-service-hardening/blob/master/web-server.md)  
+[2](http://round1tko.tistory.com/64)  
 	
 # 6. IOCP
 
  IOCP는 Input/Output Completion Port의 약자로 입력과 출력의 완료를 담당할 포트를 지정해서 처리하겠다는 의미이다. 입력과 출력의 완료시점에서의 통지는 overlapped(중첩 입출력)에서 처리가 되므로, 이 기술은 윈도의 중첩 입출력 기술을 확장시킨 것으로 볼 수 있다.
-포트는 작업 혹은 서비스를 전담하기 위해서 만들어지는 객체다. 소켓의 포트가 특정 서비스로 데이터 입출력을 전달하기 위한 객체임을 상기하면 이해가 쉬울 것이다. 이러한 포트의 특징을 이해하면, 입출력 완료 시점에서 이에 대한 통지를 전담할 포트를 만들어서 데이터를 처리하는 방식도 충분히 생각해 볼 수 있을 것이다.
+포트는 작업 혹은 서비스를 전담하기 위해서 만들어지는 객체다. 소켓의 포트가 특정 서비스로 데이터 입출력을 전달하기 위한 객체임을 상기하면 이해가 쉬울 것이다. 이러한 포트의 특징을 이해하면, 입출력 완료 시점에서 이에 대한 통지를 전담할 포트를 만들어서 데이터를 처리하는 방식도 충분히 생각해 볼 수 있을 것이다.  
 [1](https://www.joinc.co.kr/w/Site/win_network_prog/doc/iocp)  
 [2](http://ozt88.tistory.com/23)  
  
