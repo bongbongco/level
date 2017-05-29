@@ -340,7 +340,6 @@ Ajax의 기본 Method를 이용해서 Server와 통신하려면 XMLHttpRequest�
  
  
 # 10. aws (ec2 / elastic search / dynamodb/lambda)
-
 ## 10.1. EC2 : EC2(Elastic Compute Cloud)는 AWS 클라우드에서 확장식 컴퓨팅을 제공한다. 
 [1](http://docs.aws.amazon.com/ko_kr/AWSEC2/latest/UserGuide/concepts.html)  
 
@@ -388,10 +387,8 @@ Ajax의 기본 Method를 이용해서 Server와 통신하려면 XMLHttpRequest�
 [2](http://cs.sch.ac.kr/lecture/Embedd/06-CompSys-8-Apache.pdf)  
 
 # 13. mysql / mariadb
-
 ## 13.1. Mysql
 [1](https://wiki.gentoo.org/wiki/MySQL/Startup_Guide/ko)  
-Mysql 퍼포먼스 최적화
 
 ## 13.2. MariaDB
 [1](https://mariadb.com/kb/ko/mariadb/)  
