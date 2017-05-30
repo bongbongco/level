@@ -468,7 +468,8 @@ HBase는 컬럼 패밀리로 구성된 컬럼 기반으로 되어 있으며 Key-
 
 HDFS와 맵리듀스가 대량의 데이터 집합에 대한 배치 작업을 처리하기에 강력한 도구이지만, 개별 레코드를 효과적으로 읽거나 쓰는 방법을 제공하고 있지 않으므로 이러한 실시간 처리 기능을 위해 HBase를 활용하게 된다.
 
-### Hive 
+### Hive
+Hive는 HiveQL이라는 SQL과 유사한 쿼리를 사용한다. HiveQL로 정의한 내용을 Hive가 MapReduce Job으로 변환해서 실행한다고 한다. 정확하게 설명하면 MapReduce 작업이 필요할 때, Hive는 Java MapReduce 프로그램을 생성하는 것은 아니고 인터프리터 언어처럼 내장된 Generic Mapper와 Reducer 모듈을 사용하고, 여기에 Job Plan이라는 XML 파일을 적용해 MapReduce Job을 생성한다고 한다.이렇게 MapReduce Job을 생성하면 비로소 Job Tracker와 통신을 시작한다.  
 [1](http://blog.acronym.co.kr/329)  
 
 # 8. jquery / bootstrap / ajax
