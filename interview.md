@@ -552,6 +552,12 @@ Ajax의 기본 Method를 이용해서 Server와 통신하려면 XMLHttpRequest�
 [2](https://code.tutsplus.com/ko/tutorials/an-introduction-to-pythons-flask-framework--net-28822)  
 
 ## 11.3. Sphinx
+MySql에서 대용량 데이터를 검색할 때, Sphinx에 데이터를 인덱싱하고 인덱스을 검색함으로서 검색 시간을 줄일 수 있다.
+
+Sphinx는 MySql 처럼 Index를 위한 DB이다. 인덱스를 구성하는 방식은 크게 두 가지로 나뉜다. 자체적으로 하는 것과 다른 데이터베이스에서 값을 불러와서 인덱스를 구성하는 방식이다. (이 때 전자를 Real Time Index(RT Index)라고 한다) 후자는 다시 full로 가져오는 것과 변경된 내용만 따로 가져와서 merge하는 두 가지 방식으로 나뉜다.
+
+Sphinx는 별도의 데이터베이스이므로 Indexer를 통해서 Update를 해야 한다. 이 때, 많은 부하가 걸리므로 main indexer를 초기에 빌드하고, 이후에 변경된 내용만 merge한다.  싱크를 맞추기 위해 주기적으로 update하려면 indexer를 호출해야한다. Sphinx는 자동으로 동기화하지 않으므로 Crontab과 같은 스케줄러를 활용하여 일정시간마다 동기화한다.
+
 [1](http://sacstory.tistory.com/entry/Debian-%EA%B2%80%EC%83%89-%EC%97%94%EC%A7%84-Sphinx-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0)  
 [2](http://crystalcube.co.kr/165)  
 [3](http://wiki.pchero21.com/wiki/Sphinx)  
