@@ -628,6 +628,13 @@ AJP는 mod_jk를 사용하는 Apache HTTP Server 1.x 와 Proxy AJP를 사용하�
 # 14. rabbitmq / redis
 
 ## 14.1. RabbitMQ
+RabbitMQ는 간단하게 말하면 표준 AMQP (Advanced Message Queueing Protocol) 메세지 브로커 소프트웨어(message broker software) 오픈소스이다. RabbitMQ는 erlang언어로 만들어졌을 뿐만 아니라, clustering과 failover를 위한 OTP framework로 서버가 만들어져 있다. RabbitMQ는 VMware에서 지원해주고 있는데 spring source 프로젝트중에 spring AMQP가 정식으로 1.0으로 릴리즈되면서 RabbitMQ의 지원은 더 적극적인것 같다. RabbitMQ는 다양한 언어로된 RabbitMQ client를 지원하고 있고 공식적인 온라인 문서에서는 Python과 Java에 대한 소스코드를 예제로 공개하고 있다.
+
+RabbitMQ를 이해하기 위해서는 우선 MQ(Message Queuing)에 대한 이해가 필요하다. 프로그래밍에서 MQ는 프로세스 또는 프로그램 인스턴스가 데이터를 서로 교환할때 사용하는 방법이다. 이때 데이터를 교환할때 시스템이 관리하는 메세지 큐를 이용하는 것이 특징이다. 이렇게 서로 다른 프로세스나 프로그램 사이에 메시지를 교환할때 AMQP(Advanced Message Queueing Protocol)을 이용한다. AMQP는 메세지 지향 미들웨어를 위한 open standard application layer protocol 이다. AMQP를 이용하면 다른 벤더 사이에 메세지를 전송하는 것이 가능한데 JMS (Java Message Service)가 API를 제공하는것과 달리 AMQP는 wire-protocol을 제공하는데 이는 octet stream을 이용해서 다른 네트워크 사이에 데이터를 전송할 수 있는 포멧인데 이를 사용한다. 이러한 복잡한 설명과 달리 RabbitMQ 튜토리얼에서는 RabbitMQ를 매우 간단하게 편지를 작성하여 받는 사람에게 보낼 우체통, 우체국, 우편배달부가 있듯, post box, post office and postman라고 비유적으로 설명하고 있다. 단지 다른것은 데이터의 바이너리 blobs을 accept, store, forward 시키는 것만 다른것이라 말한다.
+
+RabbitMQ와 같은 Message Queueing은 대용량 데이터를 처리하기 위한 배치 작업이나, 체팅 서비스, 비동기 데이터를 처리할때 사용한다. RabbitMQ를 찾아보게 된 계기도 비동기식 데이터 처리를 하기 위해서 찾아보게 되었다. 프로세스단위로 처리하는 웹 요청이나 일반적인 프로그램을 만들어서 사용하는데 사용자가 많아지거나 데이터가 많아지면 요청에 대한 응답을 기다리는 수가 증가하다가 나중에는 대기 시간이 지연되어서 서비스가 정상적으로 되지 못하는 상황이 오기 때문에 기존에 분산되어 있던 데이터 처리를 한곳으로 집중하면서 메세지 브로커를 두어서 필요한 프로그램에 작업을 분산 시키는 방법을 하고 싶었기 때문이다.
+
+
 [1](http://blog.saltfactory.net/install-rabbitmq/)  
 [2](http://bcho.tistory.com/786)  
 [3](http://abh0518.net/tok/?p=384)  
@@ -636,6 +643,11 @@ AJP는 mod_jk를 사용하는 Apache HTTP Server 1.x 와 Proxy AJP를 사용하�
 [6](http://blog.hkwon.me/rabbitmq-php-node-jsreul-hwalyonghae-gcm-push-ceorihagi/)  
 
 ## 14.2. Redis
+Redis는 "Remote DIctionary System"의 약자로 메모리 기반의 Key/Value Store 이다.
+Cassandra나 HBase와 같이 NoSQL DBMS로 분류되기도 하고, memcached와 같은 In memory 솔루션으로 분리되기도 한다.
+성능은 memcached에 버금가면서 다양한 데이타 구조체를 지원함으로써 Message Queue, Shared memory, Remote Dictionary 용도로도 사용될 수 있으며, 이런 이유로 인스탄트그램, 네이버 재팬의 LINE 메신져 서비스, StackOverflow,Blizzard,digg 등 여러 소셜 서비스에 널리 사용되고 있다.
+
+
 [1](http://tech.kakao.com/2016/03/11/redis-scan/)  
 [2](http://bcho.tistory.com/654)  
 [3](http://kerocat.tistory.com/1)  
