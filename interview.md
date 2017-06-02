@@ -598,6 +598,23 @@ AJP는 mod_jk를 사용하는 Apache HTTP Server 1.x 와 Proxy AJP를 사용하�
 [4](http://www.haruair.com/blog/1900)  
 
 ## 12.2. Apache
+웹서버에서 받는 여러 요청을 MPM (Multi Processing Module 다중 처리 모듈)에서 처리하는데 Apache2 에서는 Prefork와 worker 두 가지 방식이 있다.
+
+보통 아파치를 사용하는 경우 Prefork 모드를 이용하여 설치를 많이 한다. 우분투의 경우도 11.10까지 apt-get 로 설치를 하게되면 이 방식으로 설치되어 오다 12.04 부터 worker가 기본으로 변경되었다.
+
+리눅스에서 보면 부모 프로세스 , 자식 프로세스 라는 말이 있다. 즉 아파치 웹 서버가 받아들이는 요청을 처리하기 위해 자식 프로세스에게 분배하는 방식이다.
+
+자신의 웹서버 방식 확인은 콘솔에서 apache2 -l 혹은 httpd -l 해보면 버전과 함께 사용된 모듈파일들이 나오는데 prefock.c 가 있다면 prefo ck이고 worker.c가 있다면 worker이다.
+
+서버에 어떤 MPM이 설치되어 있는지 보려면
+	apache2 -V | grep MPM
+
+### Prefork
+실행중인 프로세스를 메모리 영역까지 복제하여 실행한다. 프로세스가 소비하는 메모리가 많다. 이것 때문에 사람들이 엔진엑스보다 아파치가 메모리를 많이 먹는다 라고들 한다. 메모리는 많이 먹는 대신 응답 프로세스를 미리 띄어 놓고 클라이언트가 요청을 하면 자식 프로세스가 반응하게 된다.
+
+### Worker
+일반적으로 멀티 CPU인 서버에서의 성능이 뛰어나다. 요즈음 쿼드 코어다 헥사코어다 해서 CPU들의 코어가 2개 이상인 시스템이 많은데 요청을 쓰레드(thread) 단위로 처리하며 최대 64개의 쓰레드로 할 수 있다. 지정된 만큼의 프로세스와 각 쓰레드를 준비하여 클라이언트의 요청을 받아 들이는 방식이다. 대신 Prefork보다 아주 적은 메모리를 사용하게 된다.  
+
 [1](https://wiki.archlinux.org/index.php/Apache_HTTP_Server_(%ED%95%9C%EA%B5%AD%EC%96%B4)  
 [2](http://cs.sch.ac.kr/lecture/Embedd/06-CompSys-8-Apache.pdf)  
 
